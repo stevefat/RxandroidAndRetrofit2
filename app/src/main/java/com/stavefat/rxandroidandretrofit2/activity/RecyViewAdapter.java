@@ -44,7 +44,7 @@ public class RecyViewAdapter extends RecyclerView.Adapter<RecyViewAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = inflater.inflate(R.layout.recyview_item, parent, false);
+        View view = inflater.inflate(R.layout.recyview_item, null);
         ViewHolder holder = new ViewHolder(view);
 
 

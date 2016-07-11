@@ -20,15 +20,15 @@ public class SupportModelUtils {
 
 
     /**
-     * 县城处理数据的方式
+     * 线程处理数据的方式
      *
      * @param observable
      * @param subscriber
      */
     public static void toSubscribe(Observable observable, Subscriber subscriber) {
-        observable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(subscriber);
+        observable.subscribeOn(Schedulers.io())   //发送在io 的线程中
+                .observeOn(AndroidSchedulers.mainThread())    //运行在android额主线程中
+                .subscribe(subscriber);   //发送结果
 
     }
 }
